@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 15px;
+}
+
+.grid-container {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.grid-container .car-card {
+    padding: 3rem;
+}
+
+.car-card img {
+    margin-bottom: 2rem;
+}
+
+.car-card .car-category {
+    color: var(--transparent-white);
+    font-size: 2rem;
+    font-family: Big Shoulders Display, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.car-card .car-desc {
+    color: var(--transparent-white);
+    font-family: Lexend Deca, sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.8;
+    margin-bottom: 4rem;
+}
+
+.learn-more-btn {
+    border: 2px solid var(--very-light-gray);
+    padding: 0.8rem 2rem;
+    border-radius: 1.5rem;
+    font-family: Lexend Deca, sans-serif;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.car-card:nth-child(1) {
+    background-color: var(--bright-orange);
+}
+
+
+.car-card:nth-child(1) .learn-more-btn {
+    color: var(--bright-orange);
+}
+
+.car-card:nth-child(1) .learn-more-btn:hover {
+    background-color: var(--bright-orange);
+    color: var(--transparent-white);
+}
+
+.car-card:nth-child(2) {
+    background-color: var(--dark-cyan);
+}
+
+.car-card:nth-child(2) .learn-more-btn {
+    color: var(--dark-cyan);
+}
+
+.car-card:nth-child(2) .learn-more-btn:hover {
+    background-color: var(--dark-cyan);
+    color: var(--transparent-white);
+}
+
+.car-card:nth-child(3) {
+    background-color: var(--very-dark-cyan);
+}
+
+.car-card:nth-child(3) .learn-more-btn {
+    color: var(--very-dark-cyan);
+}
+
+.car-card:nth-child(3) .learn-more-btn:hover {
+    background-color: var(--very-dark-cyan);
+    color: var(--transparent-white);
+}
+
+@media screen and (max-width: 375px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
